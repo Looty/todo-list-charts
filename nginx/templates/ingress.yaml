@@ -1,0 +1,35 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: nginx-ingress
+  annotations:
+    nginx.org/proxy-connect-timeout: '900s'
+    cert-manager.io/cluster-issuer: 'letsencrypt-prod'
+spec:
+  ingressClassName: nginx
+  tls:
+    - hosts:
+      - erezcowsay229q8sd5aks.tk
+      - www.erezcowsay229q8sd5aks.tk
+      secretName: nginx-tls
+  rules:
+    - host: erezcowsay229q8sd5aks.tk
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: todo
+                port:
+                  number: 5000
+    - host: www.erezcowsay229q8sd5aks.tk
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: todo
+                port:
+                  number: 5000
