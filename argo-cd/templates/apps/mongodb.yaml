@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: mongodb
+  namespace: default
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/Looty/todo-list-charts.git
+    targetRevision: HEAD
+    path: mongodb
+    directory:
+      recurse: true
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default
+  syncPolicy:
+    automated:
+      prune: false
+      selfHeal: false
