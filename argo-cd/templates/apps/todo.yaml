@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/Looty/todo-list-charts.git
+    repoURL: https://github.com/Looty/todo-list-charts
     targetRevision: 0.1.0
     chart: todo
   destination:
