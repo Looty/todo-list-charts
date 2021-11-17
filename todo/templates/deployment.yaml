@@ -35,6 +35,9 @@ spec:
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
           - containerPort: {{ .Values.container.port }}
+          env:
+          - name: APP_VERSION
+            value: {{ .Values.image.tag }}
           envFrom:
           - configMapRef:
               name: {{ .Values.configMap.nameFile }}
