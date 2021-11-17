@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/Looty/todo-list-charts
     targetRevision: 0.1.0
-    chart: todo
+    path: todo
   destination:
     server: https://kubernetes.default.svc
     namespace: default
