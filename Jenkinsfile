@@ -20,6 +20,7 @@ pipeline {
                 script {
                     sshagent(credentials: ['ssh-github']) {
                         sh "git checkout main"
+                        sh "git pull"
                         def filename = 'todo/values.yaml'
                         def data = readYaml (file: filename)
                         data.image.tag = NEW_VERSION
