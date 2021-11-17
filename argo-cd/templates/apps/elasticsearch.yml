@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: prometheus-grafana
+  name: elasticsearch
   namespace: argocd
 spec:
   project: default
@@ -11,8 +11,10 @@ spec:
     path: elasticsearch/
   destination:
     server: https://kubernetes.default.svc
-    namespace: monitoring
+    namespace: logging
   syncPolicy:
     automated:
       prune: false
       selfHeal: false
+    syncOptions:
+    - CreateNamespace=true
