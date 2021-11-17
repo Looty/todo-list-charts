@@ -7,7 +7,7 @@ spec:
   project: default
   source:
     repoURL: https://github.com/Looty/todo-list-charts.git
-    targetRevision: HEAD
+    targetRevision: v1.6.1
     chart: cert-manager
   destination:
     server: https://kubernetes.default.svc

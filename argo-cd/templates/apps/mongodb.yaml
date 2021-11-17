@@ -7,7 +7,7 @@ spec:
   project: default
   source:
     repoURL: https://github.com/Looty/todo-list-charts.git
-    targetRevision: HEAD
+    targetRevision: 10.28.7
     chart: mongodb
   destination:
     server: https://kubernetes.default.svc
