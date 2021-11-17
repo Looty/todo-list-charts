@@ -4,8 +4,8 @@ metadata:
   name: {{ .Values.configMap.nameFile }}
 data:
   PORT: {{ .Values.container.port | quote }}
-  DEBUG: {{ .Values.configMap.debug | quote }}
-  HOST: {{ .Values.configMap.host | quote }}
-  DBNAME: {{ .Values.configMap.dbName | quote }}
-  FLASK_ENV: {{ .Values.configMap.flask_env | quote }}
-  APP_VERSION: {{ .Values.configMap.app_version | quote }}
+  DEBUG: "false"
+  HOST: "0.0.0.0"
+  DBNAME: todos
+  FLASK_ENV: production
+  APP_VERSION: {{ .Values.image.tag | quote }}
