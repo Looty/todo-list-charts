@@ -7,8 +7,8 @@ spec:
   project: default
   source:
     repoURL: https://github.com/Looty/todo-list-charts.git
-    targetRevision: 4.0.6
-    chart: ingress-nginx
+    targetRevision: HEAD
+    path: ingress-nginx/
   destination:
     server: https://kubernetes.default.svc
     namespace: default
