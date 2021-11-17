@@ -20,9 +20,9 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: todo
+                name: nginx
                 port:
-                  number: 5000
+                  number: 80
     - host: www.erezcowsay229q8sd5aks.tk
       http:
         paths:
@@ -30,6 +30,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: todo
+                name: nginx
                 port:
-                  number: 5000
+                  number: 80
