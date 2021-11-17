@@ -2,7 +2,7 @@ replicaCount: 1
 image:
   repository: 498047829710.dkr.ecr.eu-central-1.amazonaws.com/todolistnginx
   pullPolicy: IfNotPresent
-  tag: 1.0.30
+  tag: 1.0.31
 imagePullSecrets: []
 nameOverride: ''
 fullnameOverride: ''
