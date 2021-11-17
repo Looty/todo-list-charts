@@ -1,5 +1,9 @@
 pipeline {
     agent any
+
+    environment {
+        NEW_VERSION = "${params.NEW_VERSION}"
+    }
     
     options {
         timestamps()
@@ -17,21 +21,21 @@ pipeline {
                     sshagent(credentials: ['ssh-github']) {
                         def filename = 'todo/values.yaml'
                         def data = readYaml (file: filename)
-                        data.image.tag = env.MY_PARAM
+                        data.image.tag = NEW_VERSION
 
                         sh "rm $filename"
                         writeYaml file: filename, data: data
 
                         filename = 'nginx/values.yaml'
                         data = readYaml (file: filename)
-                        data.image.tag = env.MY_PARAM
+                        data.image.tag = NEW_VERSION
                         
                         sh "rm $filename"
                         writeYaml file: filename, data: data
 
                         sh """
                             git add .
-                            git commit -am "Updated app+nginx image tag to ${env.MY_PARAM}"
+                            git commit -am "Updated app+nginx image tag to $NEW_VERSION"
                             git push
                         """
                     }
