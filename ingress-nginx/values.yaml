@@ -636,10 +636,8 @@ controller:
         release: kube-prometheus-stack #erez
       # The label to use to retrieve the job name from.
       # jobLabel: "app.kubernetes.io/name"
-      namespace: monitoring #"" erez
-      namespaceSelector:
-        any: true
-      #namespaceSelector: {}
+      namespace: ""
+      namespaceSelector: {}
       # Default: scrape .Release.Namespace only
       # To scrape all, use the following:
       # namespaceSelector:
