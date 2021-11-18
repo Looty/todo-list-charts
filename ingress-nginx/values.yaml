@@ -612,7 +612,7 @@ controller:
       #annotations: {}
       annotations:
         prometheus.io/scrape: "true"
-        prometheus.io/port: {{ .Values.controller.metrics.port }}
+        prometheus.io/port: "10254"
         prometheus.io/path: "/metrics"
 
       # clusterIP: ""
