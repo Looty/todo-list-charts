@@ -522,6 +522,12 @@ elasticsearch:
   ##   - elasticsearch-1
   ##   - elasticsearch-2
   ##
+  enabled: false
+  external:
+    hosts:
+      - elasticsearch-coordinating-only.logging.svc.cluster.local
+    port: 9200
+    
   hosts: []
   ## @param elasticsearch.port Elasticsearch port
   ##
