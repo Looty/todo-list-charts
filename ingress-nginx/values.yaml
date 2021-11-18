@@ -613,7 +613,7 @@ controller:
       annotations:
         prometheus.io/scrape: "true"
         prometheus.io/port: "10254"
-        prometheus.io/path: "/metrics"
+        # prometheus.io/path: "/metrics"
 
       # clusterIP: ""
 
@@ -636,8 +636,10 @@ controller:
         release: kube-prometheus-stack #erez
       # The label to use to retrieve the job name from.
       # jobLabel: "app.kubernetes.io/name"
-      namespace: ""
-      namespaceSelector: {}
+      namespace: monitoring #"" erez
+      namespaceSelector:
+        any: true
+      #namespaceSelector: {}
       # Default: scrape .Release.Namespace only
       # To scrape all, use the following:
       # namespaceSelector:
