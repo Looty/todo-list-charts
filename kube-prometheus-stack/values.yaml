@@ -739,7 +739,7 @@ grafana:
   ## Passed to grafana subchart and used by servicemonitor below
   ##
   service:
-    type: LoadBalancer #ClusterIP
+    type: ClusterIP #LoadBalancer
     portName: service
 
   ## If true, create a serviceMonitor for grafana
@@ -1802,7 +1802,7 @@ prometheus:
     loadBalancerSourceRanges: []
     ## Service type
     ##
-    type: LoadBalancer #ClusterIP
+    type: ClusterIP
 
     sessionAffinity: ""
 
