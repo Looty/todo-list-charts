@@ -633,7 +633,7 @@ controller:
       enabled: true #erez
       # additionalLabels: #{}
       additionalLabels:
-        release: kube-prometheus-stack #erez
+        release: prometheus #kube-prometheus-stack #erez
       # The label to use to retrieve the job name from.
       # jobLabel: "app.kubernetes.io/name"
       namespace: ""
