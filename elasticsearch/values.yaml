@@ -19,7 +19,7 @@ global:
   storageClass: ""
   coordinating:
     name: coordinating-only
-  kibanaEnabled: false
+  kibanaEnabled: true
 
 ## @section Common parameters
 
