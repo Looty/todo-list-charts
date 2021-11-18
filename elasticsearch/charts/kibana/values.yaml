@@ -226,8 +226,7 @@ service:
   port: 5601
   ## @param service.type Kubernetes Service type
   ##
-  #type: ClusterIP erez
-  type: LoadBalancer
+  type: ClusterIP # LoadBalancer erez
   ## @param service.nodePort Specify the nodePort value for the LoadBalancer and NodePort service types
   ## ref: https://kubernetes.io/docs/concepts/services-networking/service/#type-nodeport
   ##
