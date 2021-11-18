@@ -173,7 +173,7 @@ persistence:
   existingClaim: ""
   ## @param persistence.accessMode Access mode to the PV
   ##
-  accessMode: ReadWriteOnce
+  accessMode: ReadWriteMany #ReadWriteOnce erez
   ## @param persistence.size Size for the PV
   ##
   size: 10Gi
