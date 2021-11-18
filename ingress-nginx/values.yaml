@@ -613,7 +613,7 @@ controller:
       annotations:
         prometheus.io/scrape: "true"
         prometheus.io/port: "10254"
-        # prometheus.io/path: "/metrics"
+        prometheus.io/path: "/metrics"
 
       # clusterIP: ""
 
