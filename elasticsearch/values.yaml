@@ -429,7 +429,7 @@ master:
       - ReadWriteOnce
     ## @param master.persistence.size Persistent Volume Size
     ##
-    size: 8Gi
+    size: 1Gi #erez
   ## Service parameters for master-eligible node(s)
   ##
   service:
@@ -901,7 +901,7 @@ data:
       - ReadWriteOnce
     ## @param data.persistence.size Persistent Volume Size
     ##
-    size: 8Gi
+    size: 1Gi #erez
   ## Provide functionality to use RBAC
   ##
   serviceAccount:
