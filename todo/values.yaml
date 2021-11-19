@@ -45,7 +45,7 @@ secret:
   url:
     envName: MONGO_URL
     keyName: mongo_url
-    value: bW9uZ29kYjovL2FkbWluOnBhc3N3b3JkQG1vbmdvZGItMC5tb25nb2RiLWhlYWRsZXNzLmRlZmF1bHQuc3ZjLmNsdXN0ZXIubG9jYWw6MjcwMTcvdG9kb3M=
+    value: bW9uZ29kYjovL2FkbWluOnBhc3N3b3JkQHRvZG8tbW9uZ29kYi0wLnRvZG8tbW9uZ29kYi1oZWFkbGVzcy5kZWZhdWx0LnN2Yy5jbHVzdGVyLmxvY2FsOjI3MDE3L3RvZG9z
   rootPass:
     envName: MONGODB_ROOT_PASSWORD
     keyName: root_password
