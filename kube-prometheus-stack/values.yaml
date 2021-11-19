@@ -2378,7 +2378,7 @@ prometheus:
         scrape_interval: 5s
         static_configs:
           - targets:
-            - ingress-nginx-controller-metrics:10254
+            - ingress-nginx-controller-metrics.default.svc.cluster.local:10254
     # - job_name: kube-etcd
     #   kubernetes_sd_configs:
     #     - role: node
